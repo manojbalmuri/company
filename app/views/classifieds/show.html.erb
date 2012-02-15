@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @classified.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @classified.description %>
+</p>
+
+<p>
+  <b>location:</b>
+  <%= @classified.location %>
+</p>
+
+<p>
+  <b>Expiredate:</b>
+  <%= @classified.expiredate %>
+</p>
+
+<p>
+  <b>Phoneno:</b>
+  <%= @classified.phoneno %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @classified.email_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_classified_path(@classified) %> |
+<%= link_to 'Back', classifieds_path %>
+

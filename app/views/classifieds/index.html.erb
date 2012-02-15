@@ -1,0 +1,34 @@
+<h1>Listing classifieds</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Location</th>
+    <th>Expiredate</th>
+    <th>Phoneno</th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @classifieds.each do |classified| %>
+  <tr>
+    <td><%= classified.title %></td>
+    <td><%= classified.description %></td>
+    <td><%= classified.location %></td>
+    <td><%= classified.expiredate %></td>
+    <td><%= classified.phoneno %></td>
+    <td><%= classified.email_id %></td>
+    <td><%= link_to 'Show', classified %></td>
+    <td><%= link_to 'Edit', edit_classified_path(classified) %></td>
+    <td><%= link_to 'Destroy', classified, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Classified', new_classified_path %>
+

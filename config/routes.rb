@@ -1,4 +1,9 @@
 Company::Application.routes.draw do
+
+  resources :classifieds
+  root :to=> "classifieds#index"
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
