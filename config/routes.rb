@@ -1,7 +1,18 @@
 Company::Application.routes.draw do
 
+   
+
   resources :classifieds
   root :to=> "classifieds#index"
+  resources :users do
+    collection do
+      get 'sign_in'
+      get 'sign_intest'
+      
+      end
+    
+    end
+  
   
   
   # The priority is based upon order of creation:
