@@ -2,12 +2,16 @@ Company::Application.routes.draw do
 
    
 
+  get "sessions/new"
+
   resources :classifieds
   root :to=> "classifieds#index"
+  resources :sessions
   resources :users do
     collection do
       get 'sign_in'
       get 'sign_intest'
+      get 'sign_out'  
       
       end
     

@@ -31,6 +31,16 @@
 <br />
 
 <%= link_to 'New Classified', new_classified_path %>
-<%= link_to 'Sign in', sign_in_users_path%>
-<%= link_to 'Registration', new_user_path%>
+<% if current_user%>
+  Logged in as <%= current_user.email %>
+  <%= link_to 'Sign out', sign_out_users_path %>  
+<% else%>
+  <%= link_to 'Sign in', sign_in_users_path %> 
+  <%= link_to 'Registration', new_user_path%>
+<% end%>
+
+
+
+
+
 
