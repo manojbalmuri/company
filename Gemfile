@@ -7,6 +7,10 @@ gem 'rails', '3.0.9'
 
 gem 'mysql2', '~> 0.2.6'
 
+group :production do
+   gem 'pg'
+end
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
